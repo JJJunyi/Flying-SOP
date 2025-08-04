@@ -1,7 +1,5 @@
 # Flying-SOP
 
-# Drone-thesis
-
 ## 1. drone SOP setting step
 
 ## Install QGroundControl
