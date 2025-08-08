@@ -150,3 +150,19 @@ IF 上傳成功，MAVProxy 會顯示類似 Loaded 5 waypoints from mission.txt �
     MAV> mode AUTO
 
 ✔ 當你切換到 AUTO 模式後，無人機就會開始依序執行你設定的任務，從起飛點開始，依序飛到每個航點，最後返回起飛點。
+
+✔ Commands (MAV_CMD) resourse: https://mavlink.io/en/messages/common.html#mav_commands
+
+✔ 其他重要的 MAVLink 任務指令代碼
+
+    MAV_CMD_NAV_LOITER_UNLIM (17): Loiter around this waypoint an unlimited amount of time (param5, param6, param7: 經緯度，高度)
+
+    MAV_CMD_NAV_LOITER_TURNS (18): 
+
+    MAV_CMD_NAV_RETURN_TO_LAUNCH (20): Return to launch location
+
+    MAV_CMD_NAV_LAND (21): Land at location.
+
+    MAV_CMD_NAV_TAKEOFF (22): vertical takeoff from ground / hand. Vehicles that support multiple takeoff modes (e.g. VTOL quadplane).(param7: 起飛高度 (m))
+
+    MAV_CMD_DO_CHANGE_SPEED (178): Change speed and/or throttle set points. The value persists until it is overridden or there is a mode change (param1: 速度類型<br/>param2: 速度 (m/s))
