@@ -119,13 +119,24 @@ If Ubuntu and need to add the Mono repository to your system -
     
     4   20   0   0   0   0   0   0   0   0   0   # Return to Launch (RTL)
 
-##### WP_ 指令代碼說明：(這個部份再去細看)
+##### 重要的 MAVLink 任務指令代碼
 
-    16 (NAV_WAYPOINT): 飛行到指定的航點。
+    MAV_CMD_NAV_WAYPOINT (16): Navigate to waypoint. This is intended for use in missions (for guided commands outside of missions use MAV_CMD_DO_REPOSITION).(緯度 (param5),經度(param6))
 
-    22 (MAV_CMD_NAV_TAKEOFF): 垂直起飛到指定高度。
+高度 (param7))
+    
+    MAV_CMD_NAV_LOITER_UNLIM (17): Loiter around this waypoint an unlimited amount of time (param5, param6, param7: 經緯度，高度)
 
-    20 (MAV_CMD_NAV_RETURN_TO_LAUNCH): 返回起飛點並降落。
+    MAV_CMD_NAV_LOITER_TURNS (18): 
+
+    MAV_CMD_NAV_RETURN_TO_LAUNCH (20): Return to launch location
+
+    MAV_CMD_NAV_LAND (21): Land at location.
+
+    MAV_CMD_NAV_TAKEOFF (22): vertical takeoff from ground / hand. Vehicles that support multiple takeoff modes (e.g. VTOL quadplane).(param7: 起飛高度 (m))
+
+    MAV_CMD_DO_CHANGE_SPEED (178): Change speed and/or throttle set points. The value persists until it is overridden or there is a mode change (param1: 速度類型<br/>param2: 速度 (m/s))
+
 
 #### 2. 上傳任務檔案
 
@@ -152,17 +163,3 @@ IF 上傳成功，MAVProxy 會顯示類似 Loaded 5 waypoints from mission.txt �
 ✔ 當你切換到 AUTO 模式後，無人機就會開始依序執行你設定的任務，從起飛點開始，依序飛到每個航點，最後返回起飛點。
 
 ✔ Commands (MAV_CMD) resourse: https://mavlink.io/en/messages/common.html#mav_commands
-
-✔ 其他重要的 MAVLink 任務指令代碼
-
-    MAV_CMD_NAV_LOITER_UNLIM (17): Loiter around this waypoint an unlimited amount of time (param5, param6, param7: 經緯度，高度)
-
-    MAV_CMD_NAV_LOITER_TURNS (18): 
-
-    MAV_CMD_NAV_RETURN_TO_LAUNCH (20): Return to launch location
-
-    MAV_CMD_NAV_LAND (21): Land at location.
-
-    MAV_CMD_NAV_TAKEOFF (22): vertical takeoff from ground / hand. Vehicles that support multiple takeoff modes (e.g. VTOL quadplane).(param7: 起飛高度 (m))
-
-    MAV_CMD_DO_CHANGE_SPEED (178): Change speed and/or throttle set points. The value persists until it is overridden or there is a mode change (param1: 速度類型<br/>param2: 速度 (m/s))
