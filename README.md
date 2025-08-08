@@ -47,6 +47,8 @@ If Ubuntu and need to add the Mono repository to your system -
 
     mavproxy.py --master=/dev/ttyACM1 --baudrate 57600
 
+<img width="1037" height="270" alt="Screenshot from 2025-08-01 16-36-29" src="https://github.com/user-attachments/assets/4b577e1b-c7ef-4d77-95de-1f6efa70dc91" />
+
 ### Second step:
 
 ✔ Check Status:
