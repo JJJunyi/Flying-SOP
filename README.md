@@ -53,9 +53,27 @@ If Ubuntu and need to add the Mono repository to your system -
 
 ✔ Check Status:
 
-status: 顯示無人機的整體狀態，包括電池電量、GPS 狀態、飛行模式等。
+    status: 顯示無人機的整體狀態，包括電池電量、GPS 狀態、飛行模式等。
 
-param show: 顯示所有參數的列表。你也可以加上參數名稱來查看特定參數，例如 param show arming_check。
+    param show: 顯示所有參數的列表。你也可以加上參數名稱來查看特定參數，例如 param show arming_check。
 
+✔ Flying Mode:
 
+    ode: 顯示目前可用的所有飛行模式。
+
+    mode GUIDED: 切換到 GUIDED 模式。
+
+    mode LOITER: 切換到 LOITER 模式。
+
+    mode RTL: 切換到 RTL (Return to Launch) 模式。
+
+✔ Flying Control:
+
+這些指令讓你可以在 GUIDED 模式下進行簡單的飛行控制。
+
+    takeoff: 讓無人機起飛。
+
+    goto 緯度 經度 高度: 讓無人機飛到指定的 GPS 座標。
+
+    land: 讓無人機在當前位置降落。
 
