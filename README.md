@@ -1,4 +1,4 @@
-# Flying-SOP
+# Flying-SOP (Programming)
 
 ## 1. drone SOP setting step
 
@@ -31,12 +31,29 @@ If Ubuntu and need to add the Mono repository to your system -
 
 ## Control the flight control panel by executing a program
 
-### step 1. 
+### First step:
 
+✔ Create a Virtual Environment (Avoid)
 
+    python3 -m venv myenv
 
-### step 2. 
+    source myenv/bin/activate
 
+    pip install PyYAML mavproxy
+
+✔ Then install MAVProxy 
+
+    sudo usermod -a -G dialout chun (Figure Permission denied)
+
+    mavproxy.py --master=/dev/ttyACM1 --baudrate 57600
+
+### Second step:
+
+✔ Check Status:
+
+status: 顯示無人機的整體狀態，包括電池電量、GPS 狀態、飛行模式等。
+
+param show: 顯示所有參數的列表。你也可以加上參數名稱來查看特定參數，例如 param show arming_check。
 
 
 
