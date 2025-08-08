@@ -85,6 +85,19 @@ If Ubuntu and need to add the Mono repository to your system -
 
 ### Execution Results
 
+✔ 後續再更新
+
 <img width="1126" height="701" alt="Screenshot from 2025-08-07 15-45-22" src="https://github.com/user-attachments/assets/d02cc3b8-ba5b-43f4-b29c-bac4fcbb331c" />
 
-## 像 QGroundControl 地面站那樣設定飛行任務，主要會使用 MISSION 模式。在 MAVProxy 中，你可以透過一系列指令來上傳、啟動和管理一個完整的飛行任務。
+### Like QGroundControl 能設定飛行任務，主要會使用 MISSION 模式。在 MAVProxy 中，可以透過一系列指令來上傳、啟動和管理一個完整的飛行任務。
+
+✔ Step Detail
+
+    1. 切換到 AUTO 或 AUTO.LOITER 模式: 這是執行自動任務的模式。
+    
+    2. 建立任務檔案: 任務檔案通常是 .txt 格式，包含了起飛、航點、返航等指令。
+    
+    3. 上傳任務檔案: 將任務檔案上傳到飛控板。
+    
+    4. 啟動任務: 執行指令讓無人機開始執行任務。
+
