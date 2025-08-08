@@ -30,3 +30,13 @@ If Ubuntu and need to add the Mono repository to your system -
     mono MissionPlanner.exe
 
 ## Control the flight control panel by executing a program
+
+### step 1. 
+
+
+
+### step 2. 
+
+
+
+
