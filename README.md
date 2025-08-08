@@ -101,3 +101,41 @@ If Ubuntu and need to add the Mono repository to your system -
     
     4. 啟動任務: 執行指令讓無人機開始執行任務。
 
+#### 1. 建立任務檔案 (mission.txt)
+   
+先手動建立一個文字檔案 mission.txt，其中包含你的飛行任務指令。每個航點或指令都佔據一行，格式如下：
+
+    序列號 指令編號 參數1 參數2 參數3 參數4 緯度 經度 高度 航點延遲時間
+
+✔ 列一個簡單的任務範例，包含起飛、飛到兩個航點，然後返航。
+
+    0   16   0   0   0   0   0   0   0   0   0   # 任務開始標誌
+    
+    1   22   0   0   0   0   0   0   0   10.0   # Takeoff 起飛到 10m
+    
+    2   16   0   0   0   0   0   0   25.074320   121.439530   10.0  # Waypoint 1
+    
+    3   16   0   0   0   0   0   0   25.074450   121.439600   10.0  # Waypoint 2
+    
+    4   20   0   0   0   0   0   0   0   0   0   # Return to Launch (RTL)
+
+##### WP_ 指令代碼說明：(這個部份再去細看)
+
+    16 (NAV_WAYPOINT): 飛行到指定的航點。
+
+    22 (MAV_CMD_NAV_TAKEOFF): 垂直起飛到指定高度。
+
+    20 (MAV_CMD_NAV_RETURN_TO_LAUNCH): 返回起飛點並降落。
+
+#### 2. 上傳任務檔案
+
+✔ MAVProxy 的控制台 (MAV>) 中，使用 mission 指令來上傳你剛才建立的任務檔案。
+
+    MAV> mission load mission.txt
+
+IF 上傳成功，MAVProxy 會顯示類似 Loaded 5 waypoints from mission.txt 的訊息。或使用 mission list 來確認任務是否成功上傳。
+    
+    MAV> mission list
+
+#### 3. 切換飛行模式並啟動任務
+
