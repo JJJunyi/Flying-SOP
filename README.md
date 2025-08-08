@@ -83,3 +83,8 @@ If Ubuntu and need to add the Mono repository to your system -
 
     land: 讓無人機在當前位置降落。
 
+### Execution Results
+
+<img width="1126" height="701" alt="Screenshot from 2025-08-07 15-45-22" src="https://github.com/user-attachments/assets/d02cc3b8-ba5b-43f4-b29c-bac4fcbb331c" />
+
+## 像 QGroundControl 地面站那樣設定飛行任務，主要會使用 MISSION 模式。在 MAVProxy 中，你可以透過一系列指令來上傳、啟動和管理一個完整的飛行任務。
