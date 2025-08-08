@@ -121,9 +121,7 @@ If Ubuntu and need to add the Mono repository to your system -
 
 ##### 重要的 MAVLink 任務指令代碼
 
-    MAV_CMD_NAV_WAYPOINT (16): Navigate to waypoint. This is intended for use in missions (for guided commands outside of missions use MAV_CMD_DO_REPOSITION).(緯度 (param5),經度(param6))
-
-高度 (param7))
+    MAV_CMD_NAV_WAYPOINT (16): Navigate to waypoint. This is intended for use in missions (for guided commands outside of missions use MAV_CMD_DO_REPOSITION).(緯度 (param5),經度(param6)), 高度 (param7))
     
     MAV_CMD_NAV_LOITER_UNLIM (17): Loiter around this waypoint an unlimited amount of time (param5, param6, param7: 經緯度，高度)
 
