@@ -28,3 +28,5 @@ If Ubuntu and need to add the Mono repository to your system -
 ### step 3. Download Mission Planner as a zip file from website(2), unzip to directory and execute:
 
     mono MissionPlanner.exe
+
+## Control the flight control panel by executing a program
