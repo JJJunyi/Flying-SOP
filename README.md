@@ -57,6 +57,12 @@ If Ubuntu and need to add the Mono repository to your system -
 
     param show: 顯示所有參數的列表。你也可以加上參數名稱來查看特定參數，例如 param show arming_check。
 
+✔ Unlock and lock
+
+    arm throttle: 解鎖無人機，讓馬達可以轉動。
+
+    disarm: 鎖定無人機，馬達會立即停止轉動。
+
 ✔ Flying Mode:
 
     ode: 顯示目前可用的所有飛行模式。
