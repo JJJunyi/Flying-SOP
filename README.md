@@ -139,3 +139,14 @@ IF 上傳成功，MAVProxy 會顯示類似 Loaded 5 waypoints from mission.txt �
 
 #### 3. 切換飛行模式並啟動任務
 
+✔ 當準備好讓無人機執行任務時，需要將其切換到 AUTO 模式。
+
+1. 解鎖無人機: 確保無人機已解鎖。
+
+    MAV> arm throttle
+   
+2. 切換到 AUTO 模式: 這會自動開始執行任務。
+
+    MAV> mode AUTO
+
+✔ 當你切換到 AUTO 模式後，無人機就會開始依序執行你設定的任務，從起飛點開始，依序飛到每個航點，最後返回起飛點。
